@@ -1,8 +1,10 @@
 package beans;
 
-public class Frigopie extends Helado {
+import interfaces.InterfazFrigopie;
+
+public class Frigopie extends Helado implements InterfazFrigopie {
 
 	public Frigopie() {
-		super(20);
+		super(30);
 	}
 }

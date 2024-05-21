@@ -1,0 +1,46 @@
+package beans;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Prueba {
+
+	private static final String URLtoAppContext = "spring/frigo.xml";
+	
+	
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext frigo = new ClassPathXmlApplicationContext(URLtoAppContext);
+		
+		System.out.println("FRIGO: " + frigo);
+		
+		//FRIGO: org.springframework.context.support.Class....................
+		
+		
+		
+		// 1)NO HAY AMBIGUEDAD PERO DEVUELVE Object .class.arrayType(). TIENES QUE HACER CASTING
+		Helado helado1 = (Helado) frigo.getBean("frigopie");
+		
+		System.out.println("HELADO 1 ... " + helado1);
+		
+		
+		//2) HACE CASTING AUTOMATICO PERO PUEDES TENER PROBLEMAS DE AMBIGUEDAD
+		// Helado helado2 = frigo.getBean(Helado.class);
+		
+		
+		
+		// DE ÉSTA MANERA SÍ FUNCIONA, PORQUE HAGO REFERENCIA ES A SU CLASO U OBJETO FANTASMA ÚNICO
+		Helado helado2 = frigo.getBean(Frigopie.class);
+		System.out.println("HELADO 2 ... " + helado2);
+		
+		
+		//TAMBIÉN PODRÍAS USAR UNA INTERFAZ
+		
+		
+		//CIERRE DE LA FACTORIA:
+		((ConfigurableApplicationContext) frigo).close();
+	}
+	
+}
