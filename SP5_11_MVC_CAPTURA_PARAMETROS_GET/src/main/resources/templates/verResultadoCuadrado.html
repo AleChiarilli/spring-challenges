@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>SPRING-MVC</title>
+		
+		<style type="text/css">
+		
+			p {
+				color:blue;
+				font-size:28px;
+				font-weight:bolder;
+			}
+		
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<div align="center">
+
+			<h1> RESULTADO DE LA OPERACION </h1>
+			
+			<br/><br/>
+			
+			<p th:text="'EL NUMERO ' + ${numero} + 
+							' ELEVADO AL CUADRADO ES ... ' + ${resultado}"/>
+			
+			<br/><br/>
+			
+
+			<a href="/"> VOLVER AL INICIO </a>		
+
+
+			<!-- HAY QUE ENCERRAR TODO EL TEXTO ENTRE COMILLAS DOBLES Y CONCATENAR
+					LAS CADENAS PARCIALES DE COMILLAS SIMPLES CON LAS EXPRESIONES ${} -->
+										
+
+			<!-- ASÍ DEBERÍA VALER, PERO THYMELEAF NO SABE PARSEARLO (UN JSP PURO SÍ PUEDE):	
+				<p th:text="EL NUMERO ${numero} ELEVADO AL CUADRADO ES ... ${resultado}"/>
+ 			-->
+		
+		
+			<!-- SI AL CAMBIAR EL CÓDIGO JAVA O ALGO EN UNA PÁGINA NO SE ACTUALIZA EL SISTEMA:					 
+					PUSAR EL BOTÓN DE RELANZAMIENTO (el pequeño cuadrado rojo con el triángulo
+					verde que hay justo debajo de la opción Project en la barra de herramientas).
+			 -->
+		
+		</div>
+
+	</body>	
+	
+</html>

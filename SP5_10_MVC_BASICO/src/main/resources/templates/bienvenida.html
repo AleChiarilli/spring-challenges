@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>SPRING-MVC</title>
+		
+		<style type="text/css">
+		
+			p {
+				font-size:28px;
+				color:red;
+				text-shadow:2px 2px 2px yellow;
+			}
+		
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<div align="center">
+
+			<h1> SPRING MVC </h1>
+			
+			<br/><br/>
+			
+			<p th:text="${mensaje}"> OPSSS !! no encuentro el mensaje </p>
+			
+			<br/><br/>
+			
+			<a href="/"> VOLVER AL INICIO </a>		
+		
+		</div>
+
+	</body>	
+	
+</html>

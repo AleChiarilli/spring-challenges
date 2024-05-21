@@ -1,0 +1,57 @@
+
+>> SP5_02_SPRING_BOOT_ANOTACIONES
+
+	Uso de las anotaciones de Spring Boot para el arranque de la factoría o contexto de Spring:
+	
+		@SpringBootApplication (S.B.A) ... SON 3 ANOTACIONES EN 1 (C-E-C):	
+	
+		    @Configuration: Esta anotación se utiliza para indicar que la clase puede contener 
+		    	beans que serán registrados al iniciar la aplicación.
+		    	
+		    @EnableAutoConfiguration: Con esta anotación se le indica a Spring que se encargue 
+		    	de configurar todas las dependencias que tengamos en el proyecto.
+		    	
+		    @ComponentScan: Permite que se escaneen todos los @Component que se encuentre dentro
+		    	del paquete en el que se define, se puede configurar para que busque en los 
+		    	paquetes que queramos.
+	
+	
+	
+	Clase SpringApplication y la interfaz de arranque o escuchador CommandLineRunner:
+	
+		SpringApplication.run(clase_CommandLineRunner, parametros_args)
+	
+	
+	Clase que implementa la interfaz de escucha y sobrescribe el método run (qué hacer):
+	
+		public class Prueba implements CommandLineRunner {
+		
+			public void run(String ... args) throws Exception {			
+				// Código a ejecutar
+			}
+		
+		}
+
+	Anotaciones para registrar los beans por código:
+		@Component (existen también @Repository, @Service y @Controller para aclarar la función del bean)
+
+			S-R-C-C:
+
+			@Service							Bean con lógica de negocio (servicios)
+			@Repository							Bean de base de datos (repositorio)
+			@Controller							Bean controlador (controlador)
+			@Component							Bean general (componente)
+
+		
+	Inyección de valor sencillo (literales) y referenciado (otro bean):
+		@Value(valor)							Valor
+		@Autowired								Auto-enlazado	
+
+	Establecimiento del bean por defecto en caso de ambigüedad en regla IS-A:
+		@Primary								Primario
+		
+		
+	Actualmente el registro de los beans por anotaciones es la forma más común y habitual de proceder:		
+		Se evita el uso del fichero de configuración applicationContext.xml que suele ser muy 
+			extenso y engorroso (pero se pierde la centralización ... todo en 1 mismo sitio) ...
+				"todo tiene su parte buena y su parte mala".

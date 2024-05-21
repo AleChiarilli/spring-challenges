@@ -1,0 +1,35 @@
+
+>> SP5_06_INJECT_AUTOWIRED
+
+	Librerías que nos permitirán realizar al auto-inyección de una forma sencilla y eficaz.
+	
+	Pueden trabajar a nivel de atributo, constructor y método (A-C-M), detectando el
+		tipo de la variable sobre la que están aplicando.
+
+
+	a) CON INJECT:	
+	
+	import javax.inject.Inject;	
+	
+	@Inject
+	Pilas pilas;
+	
+	- - -
+	
+	b) CON AUTOWIRED:
+
+	import org.springframework.beans.factory.annotation.Autowired;	
+	
+	@Autowired
+	Pilas pilas;
+	
+	
+	AMBAS FUNCIONAN CORRECTAMENTE, PERO:
+	
+	@Inject es parte del estándar de Java, pertenece a la colección de anotaciones
+	 JSR-330 (inyección oficial Java). 
+	 
+	@Autowired es la anotación propia de Spring para la inyección de dependencias.
+	 Esta anotación es previa a la aparición del estándar, por lo que Spring, para
+	 cumplir con el mismo, adoptó también la anotación @Inject (inyección de Spring). 	
+	

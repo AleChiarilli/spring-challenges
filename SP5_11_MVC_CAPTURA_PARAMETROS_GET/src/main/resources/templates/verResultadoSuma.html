@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>SPRING-MVC</title>
+		
+		<style type="text/css">
+		
+			p {
+				color:red;
+				font-size:28px;
+				font-weight:bolder;
+			}
+		
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<div align="center">
+
+			<h1> RESULTADO DE LA OPERACION </h1>
+
+			<br/><br/><br/>	
+
+
+			<p th:text="'LA SUMA DE ' + ${x} + 
+							' CON ' + ${y} + 
+							' ES IGUAL A ... ' + ${resultado}"/>
+			
+			<br/><br/>
+			
+
+			<a href="/"> VOLVER AL INICIO </a>		
+
+		</div>
+
+	</body>	
+	
+</html>

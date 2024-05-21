@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html lang="es">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>SPRING-MVC</title>
+		
+		<style type="text/css">
+				
+			label {
+				color:blue;
+				font-size:18px;
+				font-weight:bolder;
+				margin-right:15px;
+			}
+			
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<div align="center">
+
+			<h1> FORMULARIO DE ALTA DE UN NUEVO PRODUCTO </h1>
+			
+			<br/><br/>
+			
+			<!-- IMPORTANTE: EL ENVÍO DEL FORMULARIO SE REALIZARÁ EN MODO POST ... SE UTILIZARÁ
+								EL MISMO CONTROLLER Y URL PERO REALIZANDO LA LLAMADA EN POST -->
+								
+			<form action="mostrarDatosIntroducidos" method="POST">
+			
+				<label>NOMBRE</label>
+				<input type="text" id="nombre" name="nombre" value="" size="30" maxlength="30"
+							required autofocus/>
+			
+				<br/><br/>
+
+				<label>DEPARTAMENTO</label>
+				<input type="text" id="departamento" name="departamento" value="" size="30" maxlength="30"
+							required/>
+			
+				<br/><br/>
+
+				<label>PRECIO</label>
+				<input type="text" id="precio" name="precio" value="" size="7" maxlength="7" 
+							required/>
+
+				<br/><br/>
+				
+				<button> ENVIAR </button>
+			
+			</form>
+		
+		
+			<br/><br/><br/>
+			
+			<a href="/"> VOLVER A INICIO </a>
+		
+		</div>
+
+	</body>	
+	
+</html>

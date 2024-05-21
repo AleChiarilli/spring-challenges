@@ -1,0 +1,13 @@
+
+>> SP5_03_AUTODESCUBRIMIENTO_BEANS_XML
+
+	Autodescubrimiento o registro automático de los beans de la aplicación mediante el fichero de
+		configuración XML ... registro declarativo (el siguiente ejercicio utiliza anotaciones).		
+		
+	Necesidad del esquema context y la etiqueta component-scan: 
+	
+    	http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	
+	
+			<context:component-scan base-package="spring"/>

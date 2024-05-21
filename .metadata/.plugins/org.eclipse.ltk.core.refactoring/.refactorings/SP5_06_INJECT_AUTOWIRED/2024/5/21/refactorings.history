@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;applicationContext.xml&apos; to &apos;SPRING_AULA_01_HELADOS_XML/src/spring&apos;&#x0D;&#x0A;- Original project: &apos;SP5_06_INJECT_AUTOWIRED&apos;&#x0D;&#x0A;- Destination element: &apos;SPRING_AULA_01_HELADOS_XML/src/spring&apos;&#x0D;&#x0A;- Original element: &apos;applicationContext.xml&apos;" description="Copy file" destination="=SPRING_AULA_01_HELADOS_XML/src&lt;spring" element1="src/spring/applicationContext.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716279507941" units="0" version="1.0"/>
+</session>

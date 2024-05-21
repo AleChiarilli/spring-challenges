@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>SPRING-MVC</title>
+		
+		<style type="text/css">
+				
+			label {
+				color:red;
+				font-size:18px;
+				font-weight:bolder;
+			}
+			
+		</style>
+		
+	</head>
+	
+	
+	<body>
+
+		<div align="center">
+
+			<h1> DATOS INTRODUCIDOS </h1>
+			
+			
+			<br/><br/>
+
+
+			<!-- LA INFORMACIÓN SE MUESTRA PORQUE EL SISTEMA LLAMARÁ AL GETTER CORRESPONDIENTE SOBRE
+					 EL BEAN DE RESPALDO -->
+					
+			<div>	
+				NOMBRE:	<label th:text="${formularioAltaProductoBean.nombre}"></label>
+			</div>
+			
+			<div>
+				DEPARTAMENTO: <label th:text="${formularioAltaProductoBean.departamento}"></label>
+			</div>
+			
+			<div>
+				PRECIO: <label th:text="${formularioAltaProductoBean.precio}"></label>
+			</div>
+			
+			
+			<br/><br/>
+
+			
+			<a href="mostrarFormularioAltaProducto"> NUEVA ALTA </a>
+			
+			<br/><br/>
+			
+			<a href="/"> VOLVER A INICIO </a>			
+			
+		</div>
+
+	</body>	
+	
+</html>

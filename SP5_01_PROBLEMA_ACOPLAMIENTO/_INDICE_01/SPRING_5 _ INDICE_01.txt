@@ -1,0 +1,20 @@
+
+>> SP5_01_PROBLEMA_ACOPLAMIENTO
+
+	El cliente crea directamente la dependencia -> new == acoplamiento fuerte.
+	
+	La dependencia cambia su constructor y obliga al cliente a adaptarse (1 problema).
+	
+	La dependencia cambia su constructor y obliga a todos sus clientes a adaptarse (muchos problemas).
+	
+	- SOLUCIÓN PARTICULAR:
+	
+	Crear una factoría para solicitar la dependencia y definición de la interfaz de uso.
+	
+	- SOLUCIÓN GENERAL:
+	
+	Empleo de la factoría de Spring para obtener el bean de dependencia y su uso a través de la interfaz.
+	
+	
+
+	

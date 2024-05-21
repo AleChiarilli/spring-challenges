@@ -1,0 +1,19 @@
+
+>> SP5_04_AUTODESCUBRIMIENTO_BEANS_ANOTACIONES
+
+	Autodescubrimiento o registro automático de los beans de la aplicación mediante el uso de
+		anotaciones (@) ... registro programativo.
+		
+	Anotación ComponentScan: 
+	
+		import org.springframework.context.annotation.ComponentScan;
+	
+	@ComponentScan("spring")				// ... escanear sólo este paquete.
+		
+	@ComponentScan( {"spring","beans"} )	// ... si hay varios paquetes {,,,}.
+	
+	@ComponentScan("*")						// ... si se quiere escanear todo.
+	
+		
+	*** Evitamos tener que recurrir al fichero de configuración XML pero perdemos
+			la centralización.

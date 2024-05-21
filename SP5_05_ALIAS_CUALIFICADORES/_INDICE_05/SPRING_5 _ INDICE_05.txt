@@ -1,0 +1,38 @@
+
+>> SP5_05_ALIAS_CUALIFICADORES
+
+	Marcado de los distintos beans mediante un alias o un cualificador
+			
+	@Component("alias")		---> para recuperarlo con spring.getBean("alias", supertipo.class).
+	
+	@Qualifier("alias")		---> para inyectarlo con @Autowired (no sirve para la forma anterior).		
+		
+		
+	*** Resuelve la ambigüedad existente cuando solicitamos un bean con el que cargar un
+			supertipo y se da la circunstancia de que hay 2 o más válidos (regla IS-A).
+		
+	Ejemplo:
+			
+		  Animal	(supertipo - clase abstracta o interface)
+		
+			Gato	(primera implementación o clase hija)
+			
+		   Perro	(segunda implementación o clase hija)
+		
+		
+		
+		Spring, dame un Animal ... ¿cuál, no puedo decidir por mi mismo?: 
+			a) quiero el bean con alias/qualificador "Garfield"		--> solicitas el Gato.
+			b) quiero el bean con alias/qualificador "Snoopy"		--> solicitas el Perro.
+			
+			
+			a)
+			spring.getBean("Garfield", Animal.class)
+			
+			
+			b)
+			@Autowired
+			@Qualifier("Garfield")
+			Animal animal;
+			
+			
